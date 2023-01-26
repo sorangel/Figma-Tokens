@@ -5,7 +5,7 @@
   "platforms": {
     "scss": {
       "transformGroup": "scss",
-      "buildPath": "build/scss/",
+      "buildPath": "scss/",
       "files": [
         {
           "destination": "_variables.scss",
@@ -15,7 +15,7 @@
     },
     "css": {
       "transformGroup": "css",
-      "buildPath": "build/css/",
+      "buildPath": "css/",
       "files": [
         {
           "destination": "_variables.css",
