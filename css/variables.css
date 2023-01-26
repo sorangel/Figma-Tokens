@@ -1,0 +1,42 @@
+/**
+ * Do not edit directly
+ * Generated on Mon, 17 Oct 2022 19:35:37 GMT
+ */
+
+:root {
+  --token-set-order-0: global;
+  --dark-800: #24242a;
+  --blue-500: #7C4FFF;
+  --text-body: #A2A2A5;
+  --text-link: #c2c2c5;
+  --text-button: #fff;
+  --text-titles: #e9e9ea;
+  --font-families-titles: Work Sans;
+  --font-families-body: Maven Pro;
+  --line-heights-120: 120%;
+  --line-heights-160: 160%;
+  --font-weights-black: 800;
+  --font-weights-extrabold: 900;
+  --font-weights-regular: 400;
+  --font-weights-bold: 700;
+  --font-size-body: 16px;
+  --font-size-mobile-title: 40px;
+  --font-size-desktop-title: 56px;
+  --letter-spacing-0: 0%;
+  --paragraph-spacing-0: 0;
+  --text-case-uppercase: uppercase;
+  --text-case-none: none;
+  --text-decoration-none: none;
+  --base: 4px;
+  --xs: 8px;
+  --sm: 12px;
+  --md: 16px;
+  --lg: 24px;
+  --xl: 32px;
+  --xxl: 40px;
+  --rounded: 12px;
+  --transparent-5: #ffffff0d;
+  --transparent-8: #ffffff14;
+  --big: 56px;
+  --biggest: 96px;
+}
