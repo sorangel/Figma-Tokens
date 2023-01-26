@@ -1,6 +1,6 @@
 {
 	"scripts": {
-		"transformer": "token-transformer tokens/**/*.json",
+		"transformer": "token-transformer tokens/tokens.json tokens/input.json",
 		"dictionary": "style-dictionary build --config config.json"
 	},
 	"dependencies": {
