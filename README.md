@@ -1,6 +1,7 @@
 # Design Tokens
 
 Design Tokens son valores específicos que se utilizan para representar elementos de diseño en un proyecto. Estos valores incluyen colores, tamaños de fuente, márgenes, etc. y se utilizan para garantizar la consistencia visual en toda la aplicación.
+Además, es una metodología, arquitectura de proceso que es agnóstico a la tecnología para que los productos escalen de forma sencilla.
 
 ## Ventajas y desventajas
 - **Ventajas:**
@@ -33,7 +34,7 @@ Los Design Tokens se definen en un archivo de configuración específico que es 
 ## Herramientas necesarias
 - Herramienta de automatización: Style Dictionary, Theo, Brand.ai, etc.
 - Control de versiones: Git, SVN, etc.
-- Herramientas de integración: preprocesadores de estilos, librerías de tokens, etc.
+- Herramientas de integración: Preprocesadores de estilos, librerías de tokens, etc.
 - Herramientas de diseño: Figma, Sketch, Adobe XD, etc.
 - Herramientas de pruebas: herramientas de pruebas automatizadas, etc.
 - Herramientas de documentación: JSDoc, etc.
@@ -160,19 +161,19 @@ document.body.appendChild(createButton("Click me!"));
   }
 }
 ```
-## Utilizar una herramienta como tokens-generator para generar archivos de estilos en diferentes lenguajes
+## Se debe utilizar una herramienta como tokens-generator para generar archivos de estilos en diferentes lenguajes
 ```
 npm install -g tokens-generator
 tokens-generator tokens.json --output-css tokens.css --output-scss tokens.scss
 ```
 
-## Utilizar una herramienta como style-dictionary para generar archivos de estilos y tokens para diferentes plataformas
+## Se debeutilizar una herramienta como style-dictionary para generar archivos de estilos y tokens para diferentes plataformas
 ```
 npm install -g style-dictionary
 style-dictionary build
 ```
 
-## Utilizar una herramienta como Theme UI para utilizar los tokens en un proyecto de React
+## Se debe utilizar una herramienta como Theme UI para utilizar los tokens en un proyecto de React
 
 ```
 npm install theme-ui
@@ -191,38 +192,12 @@ function App() {
 ```
 ## Ejemplo de código para conectar los tokens con un repositorio
 
-### Utilizar una herramienta como Git para versionar los archivos de tokens
+### Se debe tilizar una herramienta como Git para versionar los archivos de tokens
 
 ```
 git init
 git add tokens.json
 git commit -m "Initial commit"
-```
-
-## Utilizar una herramienta como GitHub Actions para automatizar la generación de archivos de estilos y la publicación en el repositorio
-
-### Crear un archivo de configuración de GitHub Actions
-```yaml
-name: Build and Deploy
-on:
-  push:
-    branches:
-      - master
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: Install dependencies
-      run: npm ci
-    - name: Generate styles
-      run: npm run build
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_branch: gh-pages
-        publish_dir: dist
 ```
 ## Utilizar una herramienta como Lerna para manejar múltiples paquetes en el repositorio y compartir los tokens entre ellos
 ```
@@ -264,7 +239,7 @@ function Button() {
 ```
 ## Utilizar los tokens en un componente de Angular
 
-```JAVASCRIPT
+```js
 import { Component } from '@angular/core';
 import { tokens } from './tokens.js';
 
@@ -298,48 +273,9 @@ export class ButtonComponent {
   padding: $spacing-base-unit;
 }
 ```
-## Utilizar los tokens en un componente de React
-```JSX
-import { useTheme } from 'emotion-theming'
-
-function Button() {
-  const theme = useTheme()
-  return (
-    <button style={{
-      backgroundColor: theme.colors.primary,
-      fontSize: theme.typography['base-font-size'],
-      padding: theme.spacing['base-unit']
-    }}>
-      Click me
-    </button>
-  )
-}
-```
-## Utilizar los tokens en un componente de Angular
-
-```TS
-import { Component } from '@angular/core';
-import { tokens } from './tokens.js';
-
-@Component({
-  selector: 'app-button',
-  template: `
-    <button [ngStyle]="{
-      'background-color': tokens.colors.primary,
-      'font-size': tokens.typography['base-font-size'],
-      'padding': tokens.spacing['base-unit']
-    }">
-      Click me
-    </button>
-  `,
-})
-export class ButtonComponent {
-  tokens = tokens;
-}
-```
 
 ## Utilizar los tokens en un componente de Vue
-```JSX
+```html
 <template>
   <div class="button">
     Click me
@@ -368,7 +304,7 @@ export default {
 }
 </script>
 ```
-```HTML CSS
+```HTML
 <style scoped>
 .button {
   background-color: tokens.colors.primary;
@@ -412,12 +348,14 @@ module.exports = {
 
 - Utilizar una herramienta de automatización para documentar y mostrar los tokens y su uso en diferentes componentes y contextos.
 
-- Utilizar una herramienta de automatización para documentar y mostrar los tokens y su uso en diferentes componentes y contextos.
+# Figma-Tokens
 
-- Utilizar una herramienta de automatización para documentar y mostrar los tokens y su uso en diferentes componentes y contextos.
+Figma Tokens es una función en el diseñador en línea Figma que permite la creación y uso de elementos como colores, tipografías, espacios, bordes y otros valores de diseño de manera consistente a lo largo de un proyecto. Los Tokens se crean en una biblioteca compartida y se pueden utilizar en todas las páginas y componentes en un proyecto. Al cambiar el valor de un Token, se actualizará automáticamente en todas las apariciones en el proyecto. Esto mejora la consistencia del diseño y ahorra tiempo en la actualización manual de valores en varios lugares.
 
+Ha sido creado por Jan Six
 
-
+Documentación oficial: https://docs.tokens.studio/sync/github
+Repo: https://github.com/six7/figma-tokens
 
 # Integración de Figma Tokens en un proyecto
 
@@ -447,12 +385,6 @@ import { spacing } from './tokens.js';
 const container = document.querySelector('.container');
 container.style.marginBottom = spacing.m;
 ```
-# figma-tokens
-
-Ha sido creado por Jan Six
-
-Documentación oficial: https://docs.tokens.studio/sync/github
-Repo: https://github.com/six7/figma-tokens
 
 ## Pasos para usar Figma Tokens con un proyecto usando Github
 
@@ -472,7 +404,7 @@ Repo: https://github.com/six7/figma-tokens
 1. npm install token-transformer
 2. npm install style-dictionary
     1. Esto crea automáticamente una carpeta tokens con un json dentro input.json
-3. npx token-transformer tokens.json tokens/input.json
+3. npx token-transformer tokens.json tokens/tokens.json
 4. Crea un config.json
    ```JSON
    {
@@ -489,7 +421,7 @@ Repo: https://github.com/six7/figma-tokens
    }
    ```
 5. Crea la carpeta css con un variables.css
-6. Ejecuta: npx style-dictionary build --config config.json
+6. Ejecuta: ```npx style-dictionary build --config config.json```
 7. Crea tus scripts en package.json
 ```JSON
  "scripts": {
@@ -497,3 +429,59 @@ Repo: https://github.com/six7/figma-tokens
        "style-dictionary": "style-dictionary build --config config.json"
        }
 ```
+
+##  API de figma 
+
+El API de Figma es una interfaz de programación de aplicaciones (API, por sus siglas en inglés) que permite a los desarrolladores acceder y controlar recursos en Figma a través de solicitudes HTTP. Con el API de Figma, los desarrolladores pueden automatizar tareas, integrar Figma en sus flujos de trabajo y desarrollar aplicaciones personalizadas que se integren con Figma. Con el API, se pueden obtener información sobre los diseños y los componentes, actualizar y crear proyectos, y mucho más.
+
+## ¿Comó se utiliza?
+Para usar el API de Figma, es necesario tener una cuenta de Figma y crear una clave de API. Luego, se pueden realizar solicitudes a la API usando la clave de API y autenticarse con OAuth 2. Con el API de Figma, es posible obtener información sobre los diseños y proyectos de Figma, así como actualizar y crear elementos en tiempo real.
+
+En resumen, para usar el API de Figma, los desarrolladores deben registrar una aplicación, autenticar a cualquier usuario, utilizar el token OAuth 2 y actualizar un token de OAuth 2. Luego, pueden realizar solicitudes a la API usando un lenguaje de programación compatible, como JavaScript o Python.
+
+## Diferencias, ventajas y desventajas de usar el api de figma y el plugin Tokens Studio for Figma(Figma Tokens).
+
+| Herramientas            | Diferencias                                                                                                                                                                                                                                                                                                                            | Ventaja                                                                                                                                                                                                                                              | Desventaja                                                                                                                                                                                                                                                                                                               |
+|-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| API Figma               | El API de Figma es una herramienta que permite acceder a los datos de una cuenta de Figma a través de una API RESTful.<br/> Con la API de Figma, es posible automatizar tareas como la recuperación de información de diseño, <br/>la creación y actualización de proyectos y la integración con herramientas externas.                | 1. Permite integrar Figma con otras herramientas externas. <br/> 2. Es posible automatizar tareas de diseño y desarrollo. <br/> 3. Ofrece una amplia gama de posibilidades y opciones para acceder y utilizar la información de una cuenta de Figma. | 1. Puede ser complejo de implementar para aquellos que no están familiarizados con el desarrollo de software. <br/> 3. Requiere un conocimiento técnico avanzado para utilizarlo de manera efectiva. <br/> 3. Es necesario tener una buena comprensión de la documentación y la API para poder utilizarla correctamente. |
+| Tokens Studio for Figma | Tokens Studio for Figma es un plugin que permite gestionar y organizar los tokens de una cuenta de Figma. Con Tokens Studio for Figma, es posible crear, modificar y eliminar tokens, así como generar archivos de configuración para diferentes lenguajes de programación y aplicar automáticamente los tokens en toda la aplicación. | 1. Es más fácil de utilizar para aquellos que no tienen un conocimiento técnico avanzado.<br/> 2. Ofrece una interfaz intuitiva y fácil de usar.<br/> 3. Permite gestionar y organizar los tokens de una cuenta de Figma de manera eficiente.        | 1. No permite integrar Figma con otras herramientas externas. <br/> 2. No es posible automatizar tareas de diseño y desarrollo de la misma manera que con el API de Figma. <br/> 3. Ofrece menos posibilidades y opciones que la API de Figma.                                                                           |
+
+## Links de Fuentes y documentación  
+
+ [Design Tokens Community Group](https://www.designtokens.org/).
+ [Design Tokens Format Module](https://tr.designtokens.org/format/).
+ [Arcade](https://usearcade.com/).
+
+### Desing Token Skeleton:
+
+[Desing Token Skeleton-Figma](https://www.figma.com/file/IGr2xoqcZX91CU7CDr4ZsI/Design-tokens-(skeleton)?node-id=0%3A1&t=mj8M4qfDq8o2mpXH-0)
+[Desing Token Skeleton-Repo-GitHub](https://github.com/klaufel/pattern-library-skeleton)
+
+## ¿Que es lo principal que debe hacer el equipo de UI UX para comenzar a trabajar con design tokens ?
+
+1.  Define los valores: Define los valores que representan tus marcas visuales y estilos, como colores, tamaños de fuente, espaciados, etc.
+
+2.  Crea una biblioteca de tokens: Crea una biblioteca de tokens que incluya todos tus valores definidos. Puedes crear esta biblioteca manualmente o utilizar herramientas de software como Figma Tokens para ayudarte.
+
+3.  Integra los tokens en tus proyectos: Integra los tokens en tus proyectos de diseño y desarrollo. Esto incluye utilizar los tokens en tus mocks y prototipos, así como en tus aplicaciones y sitios web.
+
+4.  Documenta y comparte los tokens: Documenta y comparte los tokens con el equipo de diseño y desarrollo, para asegurarte de que todos estén alineados y utilicen los mismos valores en sus trabajos.
+
+5.  Mantenimiento: Mantén y actualiza tus tokens regularmente para asegurarte de que sigan siendo relevantes y coherentes con los cambios en tu marca y estilo.
+
+##  ¿Cuales son las herramientas que debe utilizar el equipo de UI/UX para empezar a trabajar con Design Tokens ?
+
+Un equipo de UI/UX puede utilizar las siguientes herramientas para trabajar con Design Tokens:
+
+1.  Figma Tokens: Herramienta de software para crear, almacenar y administrar tokens de diseño en Figma.
+
+2.  Sketch Tokens: Plug-in de Sketch para crear y administrar tokens de diseño en Sketch.
+
+3.  Style Dictionary: Herramienta de código abierto para crear, almacenar y administrar tokens de diseño en varios formatos y plataformas.
+
+4.  Brand.ai: Plataforma de diseño de marca que incluye herramientas para crear, almacenar y administrar tokens de diseño.
+
+5.  Adobe XD: Herramienta de diseño que incluye la capacidad de crear y administrar tokens de diseño.
+
+6.  Microsoft Fluent: Herramienta de diseño de Microsoft que incluye tokens de diseño preestablecidos y la capacidad de crear y administrar tokens personalizados.
+    

@@ -1,18 +1,19 @@
 /**
  * Do not edit directly
- * Generated on Thu, 26 Jan 2023 19:23:31 GMT
+ * Generated on Fri, 27 Jan 2023 13:54:54 GMT
  */
 
 :root {
   --global-token-set-order-0: global;
   --global-colors-dark-800: #24242a;
-  --global-colors-blue-500: #3a4ada;
+  --global-colors-blue-500: #3828b5;
   --global-colors-text-body: #A2A2A5;
   --global-colors-text-link: #c2c2c5;
   --global-colors-text-button: #fff;
   --global-colors-text-titles: #e9e9ea;
   --global-colors-transparent-5: #ffffff0d;
   --global-colors-transparent-8: #ffffff14;
+  --global-colors-red: #bf0303;
   --global-font-families-titles: Work Sans;
   --global-font-families-body: Maven Pro;
   --global-line-heights-120: 120%;
@@ -29,14 +30,15 @@
   --global-text-case-uppercase: uppercase;
   --global-text-case-none: none;
   --global-text-decoration-none: none;
-  --global-spaces-base: 4px;
-  --global-spaces-xs: 8px;
-  --global-spaces-sm: 12px;
-  --global-spaces-md: 16px;
-  --global-spaces-lg: 24px;
-  --global-spaces-xl: 32px;
-  --global-spaces-xxl: 40px;
-  --global-spaces-big: 56px;
-  --global-spaces-biggest: 96px;
+  --global-spacing-base: 4px;
+  --global-spacing-xs: 8px;
+  --global-spacing-sm: 12px;
+  --global-spacing-md: 16px;
+  --global-spacing-lg: 24px;
+  --global-spacing-xl: 32px;
+  --global-spacing-xxl: 40px;
+  --global-spacing-big: 56px;
+  --global-spacing-biggest: 96px;
   --global-rounded: 12px;
+  --global-blue2-500: #3725de;
 }

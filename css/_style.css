@@ -118,50 +118,50 @@ button {
 }
 
 .mb-base {
-    margin-bottom: var(--global-spaces-base);
+    margin-bottom: var(--global-spacing-base);
 }
 .mb-xs {
-    margin-bottom: var(--global-spaces-xs);
+    margin-bottom: var(--global-spacing-xs);
 }
 .mb-sm {
-    margin-bottom: var(--global-spaces-sm);
+    margin-bottom: var(--global-spacing-sm);
 }
 
 .mb-md {
-    margin-bottom: var(--global-spaces-md);
+    margin-bottom: var(--global-spacing-md);
 }
 .mb-lg {
-    margin-bottom: var(--global-spaces-lg);
+    margin-bottom: var(--global-spacing-lg);
 }
 .mb-xl {
-    margin-bottom: var(--global-spaces-xl);
+    margin-bottom: var(--global-spacing-xl);
 }
 .mb-xxl {
-    margin-bottom: var(--global-spaces-xxl);
+    margin-bottom: var(--global-spacing-xxl);
 }
 
 .pb-base {
-    padding-bottom: var(--global-spaces-base);
+    padding-bottom: var(--global-spacing-base);
 }
 .pb-xs {
-    padding-bottom: var(--global-spaces-xs);
+    padding-bottom: var(--global-spacing-xs);
 }
 .pb-sm {
-    padding-bottom: var(--global-spaces-sm);
+    padding-bottom: var(--global-spacing-sm);
 }
 
 .pb-md {
-    padding-bottom: var(--global-spaces-md);
+    padding-bottom: var(--global-spacing-md);
 }
 .pb-lg {
-    padding-bottom: var(--global-spaces-lg);
+    padding-bottom: var(--global-spacing-lg);
 }
 
 .pb-xl {
-    padding-bottom: var(--global-spaces-xl);
+    padding-bottom: var(--global-spacing-xl);
 }
 .pb-xxl {
-    padding-bottom: var(--global-spaces-xxl);
+    padding-bottom: var(--global-spacing-xxl);
 }
 
 .margin-top {
@@ -198,7 +198,7 @@ button {
     color: var(--global-colors-text-titles);
     font-size: var(--global-font-size-body);
     font-weight: var(--global-font-weights-extrabold);
-    padding-bottom: var(--global-spaces-base);
+    padding-bottom: var(--global-spacing-base);
     line-height: var(--global-line-heights-120);
 }
 
@@ -221,42 +221,42 @@ button {
 .send-mail {
     background: var(--global-colors-transparent-5);
     border: 1.5px solid var(--global-colors-transparent-8);
-    padding-top: var(--global-spaces-sm);
-    padding-bottom: var(--global-spaces-sm);
-    padding-left: var(--global-spaces-md);
-    padding-right: var(--global-spaces-md);
-    border-radius: var(--global-spaces-sm);
-    border-radius: var(--global-spaces-sm);
+    padding-top: var(--global-spacing-sm);
+    padding-bottom: var(--global-spacing-sm);
+    padding-left: var(--global-spacing-md);
+    padding-right: var(--global-spacing-md);
+    border-radius: var(--global-spacing-sm);
+    border-radius: var(--global-spacing-sm);
 }
 
 .button {
     background: var(--global-colors-blue-500);
-    padding-top: var(--global-spaces-sm);
-    padding-bottom: var(--global-spaces-sm);
-    padding-left: var(--global-spaces-md);
-    padding-right: var(--global-spaces-md);
-    border-radius: var(--global-spaces-sm);
+    padding-top: var(--global-spacing-sm);
+    padding-bottom: var(--global-spacing-sm);
+    padding-left: var(--global-spacing-md);
+    padding-right: var(--global-spacing-md);
+    border-radius: var(--global-spacing-sm);
     color: var(--global-colors-text-button);
     font-weight: var(--global-font-weights-bold);
 }
 
 .input-button {
     display: flex;
-    gap: var(--global-spaces-xs);
-    margin-bottom: var(--global-spaces-big);
+    gap: var(--global-spacing-xs);
+    margin-bottom: var(--global-spacing-big);
 }
 
 @media (max-width: 768px) {
     .input-button {
         display: flex;
         flex-direction: column;
-        gap: var(--global-spaces-xs);
+        gap: var(--global-spacing-xs);
     }
 }
 
 .links {
     color: var(--global-colors-text-body);
-    padding-right: var(--global-spaces-lg);
+    padding-right: var(--global-spacing-lg);
 }
 
 .links:hover {
